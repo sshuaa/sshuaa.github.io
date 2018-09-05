@@ -1,62 +1,20 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<style>
-			body {
-				background-color: #ffffff;
-				margin: 0;
-				overflow: hidden;
-			}
-		</style>
-	</head>
-	<body>
+<head>
+	<title>joSHUA's Sketch</title>
+	<style>
+		h1{color:blue;}
+		p{color:blue;}
 
-		<script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
-		<script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
-		<script>
+	</style>
+</head>
+<body>
 
-			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-
-			var camera, scene, renderer;
-			var geometry, material, mesh;
-
-			function setup() {
-
-				var W = window.innerWidth, H = window.innerHeight;
-				renderer = new THREE.WebGLRenderer();
-				renderer.setSize( W, H );
-				document.body.appendChild( renderer.domElement );
-
-				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
-				camera.position.z = 500;
-
-				scene = new THREE.Scene();
-
-
-				// paste your code from the geometryGUI here
-geometry = new THREE.IcosahedronGeometry(149.82, 1);
-//material = new THREE.MeshPhongMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, ambient: 0xffffff, emissive: 0x000000, specular: 0x0ac3dc, shininess: -1.82, wireframe: true, wireframeLinewidth: 7.83, transparent: true, opacity: 1});
-material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, color: 0xdcdcdc});
-
-mesh = new THREE.Mesh(geometry, material);
-scene.add(mesh);
-
-			}
-
-			function draw() {
-
-				requestAnimationFrame( draw );
-				// experiment with code from the snippets menu here
-
-				renderer.render( scene, camera );
-
-			}
-
-			setup();
-			draw();
-
-		</script>
-
-	</body>
+	<h1>Hello World!</h1>
+	<h2>Hallo Welt!</h2>
+	<h3>Привет мир!</h3>
+<p>This is some text. My name is Shua!</p>
+<iframe src="sketch.html"></iframe>
+</body>
 </html>
