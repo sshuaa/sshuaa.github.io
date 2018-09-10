@@ -11,13 +11,13 @@
 		</style>
 	</head>
 	<body>
-		
-		<script src="https://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
-		<script src="https://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
+
+		<script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+		<script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script>
 		<script>
 
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-			
+
 			var camera, scene, renderer;
 			var geometry, material, mesh;
 
@@ -32,11 +32,13 @@
 				camera.position.z = 500;
 
 				scene = new THREE.Scene();
-				
-				
+
+
 				// paste your code from the geometryGUI here
 geometry = new THREE.IcosahedronGeometry(149.82, 1);
-material = new THREE.MeshPhongMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, ambient: 0xffffff, emissive: 0x000000, specular: 0x0ac3dc, shininess: -1.82, wireframe: true, wireframeLinewidth: 7.83, transparent: true, opacity: 1});
+//material = new THREE.MeshPhongMaterial({shading: THREE.FlatShading, color: 0xdcdcdc, ambient: 0xffffff, emissive: 0x000000, specular: 0x0ac3dc, shininess: -1.82, wireframe: true, wireframeLinewidth: 7.83, transparent: true, opacity: 1});
+material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, color: 0xdcdcdc});
+
 mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
@@ -45,7 +47,6 @@ scene.add(mesh);
 			function draw() {
 
 				requestAnimationFrame( draw );
-				
 				// experiment with code from the snippets menu here
 
 				renderer.render( scene, camera );
@@ -56,6 +57,6 @@ scene.add(mesh);
 			draw();
 
 		</script>
-		
+
 	</body>
 </html>
